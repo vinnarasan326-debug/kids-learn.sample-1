@@ -1,0 +1,3517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Little Learner 🌈</title>
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Comic Sans MS",
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1f8,
+            #e9f8ff,
+            #fff9d6
+        );
+
+    color: #333;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8fab,
+            #ffb3c6,
+            #8ed8f8
+        );
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px #bbb;
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 42px;
+}
+
+header p {
+
+    font-size: 19px;
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: white;
+
+    padding: 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 12px #ccc;
+}
+
+nav button {
+
+    border: none;
+
+    margin: 4px;
+
+    padding: 10px 16px;
+
+    border-radius: 25px;
+
+    background: #ffd166;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+    touch-action: manipulation;
+}
+
+nav button:hover {
+
+    background: #ffb703;
+
+    transform: scale(1.07);
+}
+
+nav button:active {
+
+    transform: scale(.92);
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+.hero {
+
+    text-align: center;
+
+    padding: 45px 15px;
+}
+
+.baby {
+
+    display: inline-block;
+
+    font-size: 120px;
+
+    animation:
+        babyIdle 2.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes babyIdle {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+.baby-happy {
+
+    animation:
+        babyHappy 1s ease;
+}
+
+@keyframes babyHappy {
+
+    0% {
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+    30% {
+
+        transform:
+            scale(1.12)
+            translateY(-15px);
+    }
+
+    55% {
+
+        transform:
+            scale(1.05)
+            translateY(0);
+    }
+
+    75% {
+
+        transform:
+            scale(1.1)
+            translateY(-8px);
+    }
+
+    100% {
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+.hero h2 {
+
+    color: #ff4f81;
+
+    font-size: 35px;
+}
+
+.hero p {
+
+    font-size: 20px;
+}
+
+.speech {
+
+    display: inline-block;
+
+    max-width: 90%;
+
+    padding: 18px 28px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    color: #ff4f81;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px #bbb;
+
+    transition: .3s ease;
+}
+
+
+/* =====================================================
+   START BUTTON
+===================================================== */
+
+.start-button {
+
+    border: none;
+
+    margin: 25px;
+
+    padding: 16px 35px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff8fab,
+            #ff4f81
+        );
+
+    color: white;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px #bbb;
+
+    transition:
+        transform .25s ease;
+
+    touch-action: manipulation;
+}
+
+.start-button:hover {
+
+    transform:
+        scale(1.06);
+}
+
+.start-button:active {
+
+    transform:
+        scale(.94);
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card {
+
+    position: relative;
+
+    min-height: 175px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 7px 18px #ccc;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    touch-action: manipulation;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.card:hover {
+
+    transform:
+        translateY(-6px)
+        scale(1.02);
+
+    box-shadow:
+        0 12px 25px #bbb;
+}
+
+.card:active {
+
+    transform:
+        scale(.94);
+}
+
+.card.touching {
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 12px 30px
+        rgba(255,143,171,.45);
+}
+
+
+/* =====================================================
+   HOME CARDS
+===================================================== */
+
+.home-card {
+
+    min-height: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.home-icon {
+
+    font-size: 65px;
+
+    animation:
+        iconIdle 2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes iconIdle {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+    }
+}
+
+.home-card h3 {
+
+    margin: 8px 0;
+
+    font-size: 24px;
+
+    color: #ff4f81;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+
+    padding: 55px 15px;
+
+    text-align: center;
+}
+
+section h2 {
+
+    color: #ff4f81;
+
+    font-size: 32px;
+}
+
+.section-text {
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   ABC
+===================================================== */
+
+.letter {
+
+    font-size: 70px;
+
+    color: #ff4f81;
+
+    font-weight: bold;
+}
+
+.letter-touch {
+
+    animation:
+        letterBounce .65s ease;
+}
+
+@keyframes letterBounce {
+
+    0% {
+
+        transform:
+            scale(1);
+    }
+
+    40% {
+
+        transform:
+            scale(1.3);
+    }
+
+    70% {
+
+        transform:
+            scale(1.08);
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+    }
+}
+
+.word {
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   NUMBERS
+===================================================== */
+
+.number {
+
+    font-size: 70px;
+
+    color: #ff8a00;
+
+    font-weight: bold;
+}
+
+.number-touch {
+
+    animation:
+        numberPop .6s ease;
+}
+
+@keyframes numberPop {
+
+    0% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.3)
+            rotate(4deg);
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+    }
+}
+
+.count {
+
+    font-size: 23px;
+}
+
+
+/* =====================================================
+   COLOURS
+===================================================== */
+
+.color-circle {
+
+    width: 105px;
+
+    height: 105px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    transition:
+        transform .3s ease;
+}
+
+.card.touching
+.color-circle {
+
+    transform:
+        scale(1.12);
+}
+
+.red {
+    background: #ff4d6d;
+}
+
+.blue {
+    background: #4dabf7;
+}
+
+.green {
+    background: #69db7c;
+}
+
+.yellow {
+    background: #ffd43b;
+}
+
+.purple {
+    background: #b197fc;
+}
+
+.orange {
+    background: #ff922b;
+}
+
+.pink {
+    background: #f783ac;
+}
+
+.sky {
+    background: #74c0fc;
+}
+
+
+/* =====================================================
+   SHAPES
+===================================================== */
+
+.shape {
+
+    width: 100px;
+
+    height: 100px;
+
+    margin: auto;
+
+    transition:
+        transform .3s ease;
+}
+
+.card.touching
+.shape {
+
+    transform:
+        scale(1.12)
+        rotate(5deg);
+}
+
+.circle {
+
+    background: #ff6b81;
+
+    border-radius: 50%;
+}
+
+.square {
+
+    background: #4dabf7;
+}
+
+.triangle {
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+        55px solid transparent;
+
+    border-right:
+        55px solid transparent;
+
+    border-bottom:
+        100px solid #69db7c;
+}
+
+.star {
+
+    font-size: 85px;
+}
+
+
+/* =====================================================
+   ANIMALS
+===================================================== */
+
+.animal {
+
+    display: inline-block;
+
+    font-size: 80px;
+}
+
+.animal-touch {
+
+    animation:
+        smoothAnimal .8s
+        ease-in-out;
+}
+
+@keyframes smoothAnimal {
+
+    0% {
+
+        transform:
+            scale(1)
+            translateY(0)
+            rotate(0);
+    }
+
+    20% {
+
+        transform:
+            scale(1.08)
+            translateY(-8px)
+            rotate(-3deg);
+    }
+
+    45% {
+
+        transform:
+            scale(1.15)
+            translateY(-22px)
+            rotate(4deg);
+    }
+
+    65% {
+
+        transform:
+            scale(1.10)
+            translateY(-10px)
+            rotate(-3deg);
+    }
+
+    100% {
+
+        transform:
+            scale(1)
+            translateY(0)
+            rotate(0);
+    }
+}
+
+
+/* =====================================================
+   SOUND BUBBLE
+===================================================== */
+
+.sound-bubble {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 25%;
+
+    background: white;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    color: #ff4f81;
+
+    font-weight: bold;
+
+    pointer-events: none;
+
+    animation:
+        bubbleUp 1.3s
+        ease forwards;
+}
+
+@keyframes bubbleUp {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%,10px)
+            scale(.7);
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%,0)
+            scale(1);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%,-75px)
+            scale(1.05);
+    }
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.touch-sparkle {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    font-size: 22px;
+
+    animation:
+        sparkleMove .9s
+        ease-out forwards;
+}
+
+@keyframes sparkleMove {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(0,0)
+            scale(.5);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translate(var(--x),-30px)
+            scale(1);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(var(--x) * 1.5),
+                -90px
+            )
+            scale(.7);
+    }
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.quiz-box {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 8px 20px #ccc;
+}
+
+.quiz-box h3 {
+
+    color: #ff8a00;
+
+    font-size: 23px;
+}
+
+#quizProgress {
+
+    color: #777;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+.quiz-question {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #ff4f81;
+
+    margin-bottom: 25px;
+}
+
+.quiz-button {
+
+    display: block;
+
+    width: 85%;
+
+    margin: 12px auto;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #6ecbff;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.quiz-button:hover {
+
+    transform:
+        scale(1.03);
+}
+
+.quiz-button:active {
+
+    transform:
+        scale(.94);
+}
+
+.quiz-button:disabled {
+
+    cursor: default;
+}
+
+#quizResult {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    min-height: 35px;
+
+    margin-top: 15px;
+}
+
+#quizScore {
+
+    margin-top: 20px;
+
+    color: #ff4f81;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #ff8fab;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px) {
+
+    header h1 {
+
+        font-size: 30px;
+    }
+
+    .baby {
+
+        font-size: 85px;
+    }
+
+    .hero h2 {
+
+        font-size: 27px;
+    }
+
+    section h2 {
+
+        font-size: 27px;
+    }
+
+    .grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 12px;
+    }
+
+    .card {
+
+        padding: 14px;
+
+        min-height: 155px;
+    }
+
+    nav button {
+
+        font-size: 13px;
+
+        padding: 8px 11px;
+    }
+
+    .animal {
+
+        font-size: 65px;
+    }
+
+    .letter,
+    .number {
+
+        font-size: 55px;
+    }
+
+    .quiz-box {
+
+        padding: 20px 12px;
+    }
+
+    .quiz-question {
+
+        font-size: 21px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<h1>
+🇮🇳 🌈 Little Learner 🌈
+</h1>
+
+<p>
+Learn • Play • Smile • Grow 💖
+</p>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+<button onclick="goTo('home')">
+🏠 Home
+</button>
+
+<button onclick="goTo('abc')">
+🔤 ABC
+</button>
+
+<button onclick="goTo('numbers')">
+🔢 Numbers
+</button>
+
+<button onclick="goTo('colors')">
+🎨 Colours
+</button>
+
+<button onclick="goTo('shapes')">
+🔷 Shapes
+</button>
+
+<button onclick="goTo('animals')">
+🐾 Animals
+</button>
+
+<button onclick="goTo('quiz')">
+🧩 Daily Quiz
+</button>
+
+</nav>
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<div id="home" class="hero">
+
+<div id="baby" class="baby">
+👧🏻
+</div>
+
+<h2>
+Hello Little Friend! 👋
+</h2>
+
+<p>
+Come! Let's learn together! 🌈
+</p>
+
+<div id="speech" class="speech">
+
+👩‍🏫 Hello!
+Let's learn and have fun! 💖
+
+</div>
+
+<br>
+
+<button
+class="start-button"
+onclick="startLearning()">
+
+🎓 Start Learning
+
+</button>
+
+
+<h2>
+🌟 Choose What You Want To Learn
+</h2>
+
+
+<div class="grid">
+
+
+<div
+class="card home-card"
+onclick="homeTouch(this,'abc')">
+
+<div class="home-icon">
+🔤
+</div>
+
+<h3>
+ABC
+</h3>
+
+<p>
+Learn A to Z
+</p>
+
+</div>
+
+
+<div
+class="card home-card"
+onclick="homeTouch(this,'numbers')">
+
+<div class="home-icon">
+🔢
+</div>
+
+<h3>
+Numbers
+</h3>
+
+<p>
+Learn 1 to 10
+</p>
+
+</div>
+
+
+<div
+class="card home-card"
+onclick="homeTouch(this,'colors')">
+
+<div class="home-icon">
+🎨
+</div>
+
+<h3>
+Colours
+</h3>
+
+<p>
+Learn Colours
+</p>
+
+</div>
+
+
+<div
+class="card home-card"
+onclick="homeTouch(this,'shapes')">
+
+<div class="home-icon">
+🔷
+</div>
+
+<h3>
+Shapes
+</h3>
+
+<p>
+Learn Shapes
+</p>
+
+</div>
+
+
+<div
+class="card home-card"
+onclick="homeTouch(this,'animals')">
+
+<div class="home-icon">
+🐾
+</div>
+
+<h3>
+Animals
+</h3>
+
+<p>
+Meet Animals
+</p>
+
+</div>
+
+
+<div
+class="card home-card"
+onclick="homeTouch(this,'quiz')">
+
+<div class="home-icon">
+🧩
+</div>
+
+<h3>
+Daily Quiz
+</h3>
+
+<p>
+3 New Questions
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     ABC
+===================================================== -->
+
+<section id="abc">
+
+<h2>
+🔤 Learn ABC
+</h2>
+
+<p class="section-text">
+
+👆 Touch a letter and listen!
+
+</p>
+
+<div
+class="grid"
+id="abcGrid">
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     NUMBERS
+===================================================== -->
+
+<section id="numbers">
+
+<h2>
+🔢 Learn Numbers
+</h2>
+
+<p class="section-text">
+
+👆 Touch a number and count!
+
+</p>
+
+<div
+class="grid"
+id="numberGrid">
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     COLOURS
+===================================================== -->
+
+<section id="colors">
+
+<h2>
+🎨 Learn Colours
+</h2>
+
+<p class="section-text">
+
+👆 Touch a colour!
+
+</p>
+
+
+<div class="grid">
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Red')">
+
+<div class="color-circle red">
+</div>
+
+<h3>
+❤️ Red
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Blue')">
+
+<div class="color-circle blue">
+</div>
+
+<h3>
+💙 Blue
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Green')">
+
+<div class="color-circle green">
+</div>
+
+<h3>
+💚 Green
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Yellow')">
+
+<div class="color-circle yellow">
+</div>
+
+<h3>
+💛 Yellow
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Purple')">
+
+<div class="color-circle purple">
+</div>
+
+<h3>
+💜 Purple
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Orange')">
+
+<div class="color-circle orange">
+</div>
+
+<h3>
+🧡 Orange
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Pink')">
+
+<div class="color-circle pink">
+</div>
+
+<h3>
+🩷 Pink
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="colorSpeak(this,'Sky Blue')">
+
+<div class="color-circle sky">
+</div>
+
+<h3>
+🩵 Sky Blue
+</h3>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SHAPES
+===================================================== -->
+
+<section id="shapes">
+
+<h2>
+🔷 Learn Shapes
+</h2>
+
+<p class="section-text">
+
+👆 Touch a shape!
+
+</p>
+
+
+<div class="grid">
+
+
+<div
+class="card"
+onclick="shapeSpeak(this,'Circle')">
+
+<div class="shape circle">
+</div>
+
+<h3>
+⭕ Circle
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="shapeSpeak(this,'Square')">
+
+<div class="shape square">
+</div>
+
+<h3>
+🟦 Square
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="shapeSpeak(this,'Triangle')">
+
+<div class="shape triangle">
+</div>
+
+<h3>
+🔺 Triangle
+</h3>
+
+</div>
+
+
+<div
+class="card"
+onclick="shapeSpeak(this,'Star')">
+
+<div class="star">
+⭐
+</div>
+
+<h3>
+Star
+</h3>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ANIMALS
+===================================================== -->
+
+<section id="animals">
+
+<h2>
+🐾 Animals & Real Sounds
+</h2>
+
+<p class="section-text">
+
+👆 Touch an animal.
+
+<br>
+
+The animal moves → teacher says its name → real sound plays 🔊
+
+</p>
+
+
+<div class="grid">
+
+
+<!-- DOG -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Dog',
+'Woof Woof!',
+'sounds/dog.mp3'
+)">
+
+<div class="animal">
+🐶
+</div>
+
+<h3>
+🐶 Dog
+</h3>
+
+<p>
+🔊 Real Dog Sound
+</p>
+
+</div>
+
+
+<!-- CAT -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Cat',
+'Meow Meow!',
+'sounds/cat.mp3'
+)">
+
+<div class="animal">
+🐱
+</div>
+
+<h3>
+🐱 Cat
+</h3>
+
+<p>
+🔊 Real Cat Sound
+</p>
+
+</div>
+
+
+<!-- COW -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Cow',
+'Moo Moo!',
+'sounds/cow.mp3'
+)">
+
+<div class="animal">
+🐮
+</div>
+
+<h3>
+🐮 Cow
+</h3>
+
+<p>
+🔊 Real Cow Sound
+</p>
+
+</div>
+
+
+<!-- LION -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Lion',
+'Roar!',
+'sounds/lion.mp3'
+)">
+
+<div class="animal">
+🦁
+</div>
+
+<h3>
+🦁 Lion
+</h3>
+
+<p>
+🔊 Real Lion Sound
+</p>
+
+</div>
+
+
+<!-- ELEPHANT -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Elephant',
+'Trumpet!',
+'sounds/elephant.mp3'
+)">
+
+<div class="animal">
+🐘
+</div>
+
+<h3>
+🐘 Elephant
+</h3>
+
+<p>
+🔊 Real Elephant Sound
+</p>
+
+</div>
+
+
+<!-- MONKEY -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Monkey',
+'Ooh Ooh Ah Ah!',
+'sounds/monkey.mp3'
+)">
+
+<div class="animal">
+🐒
+</div>
+
+<h3>
+🐒 Monkey
+</h3>
+
+<p>
+🔊 Real Monkey Sound
+</p>
+
+</div>
+
+
+<!-- TIGER -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Tiger',
+'Grrrr!',
+'sounds/tiger.mp3'
+)">
+
+<div class="animal">
+🐯
+</div>
+
+<h3>
+🐯 Tiger
+</h3>
+
+<p>
+🔊 Real Tiger Sound
+</p>
+
+</div>
+
+
+<!-- RABBIT -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Rabbit',
+'Happy Hop!',
+'sounds/rabbit.mp3'
+)">
+
+<div class="animal">
+🐰
+</div>
+
+<h3>
+🐰 Rabbit
+</h3>
+
+<p>
+🔊 Rabbit Sound
+</p>
+
+</div>
+
+
+<!-- DUCK -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Duck',
+'Quack Quack!',
+'sounds/duck.mp3'
+)">
+
+<div class="animal">
+🦆
+</div>
+
+<h3>
+🦆 Duck
+</h3>
+
+<p>
+🔊 Real Duck Sound
+</p>
+
+</div>
+
+
+<!-- FROG -->
+
+<div
+class="card animal-card"
+onclick="
+animalTouch(
+this,
+'Frog',
+'Ribbit Ribbit!',
+'sounds/frog.mp3'
+)">
+
+<div class="animal">
+🐸
+</div>
+
+<h3>
+🐸 Frog
+</h3>
+
+<p>
+🔊 Real Frog Sound
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     DAILY QUIZ
+===================================================== -->
+
+<section id="quiz">
+
+<h2>
+🧩 Daily Quiz 🌟
+</h2>
+
+<p class="section-text">
+
+👩‍🏫 Every day you get 3 questions!
+
+</p>
+
+
+<div class="quiz-box">
+
+<h3 id="dayTitle">
+📅 Today's Quiz
+</h3>
+
+<div id="quizProgress">
+Question 1 of 3
+</div>
+
+<div
+class="quiz-question"
+id="quizQuestion">
+
+Loading...
+
+</div>
+
+<div id="quizOptions">
+</div>
+
+<div id="quizResult">
+</div>
+
+<button
+class="start-button"
+id="nextQuestion"
+onclick="nextQuizQuestion()"
+style="display:none;">
+
+➡️ Next Question
+
+</button>
+
+<div id="quizScore">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+🌟 Very Good! Keep Learning! 🌟
+</p>
+
+<p>
+💖 Learn • Play • Smile • Grow 💖
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+function goTo(id) {
+
+    const section =
+        document.getElementById(id);
+
+    if (!section) return;
+
+    section.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+}
+
+
+/* =====================================================
+   TEACHER VOICE
+===================================================== */
+
+function speak(text) {
+
+    if (!("speechSynthesis" in window)) {
+
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const voices =
+        speechSynthesis.getVoices();
+
+    let voice =
+        voices.find(function(v) {
+
+            return v.lang &&
+                v.lang
+                .toLowerCase()
+                .startsWith("en-in");
+
+        });
+
+
+    if (!voice) {
+
+        voice =
+            voices.find(function(v) {
+
+                return v.lang &&
+                    v.lang
+                    .toLowerCase()
+                    .startsWith("en");
+
+            });
+
+    }
+
+
+    const speech =
+        new SpeechSynthesisUtterance(text);
+
+    if (voice) {
+
+        speech.voice = voice;
+
+    }
+
+
+    speech.rate = 0.68;
+
+    speech.pitch = 1.05;
+
+    speech.volume = 1;
+
+
+    speechSynthesis.speak(
+        speech
+    );
+}
+
+
+/* =====================================================
+   BABY HAPPY
+===================================================== */
+
+function babyHappy() {
+
+    const baby =
+        document.getElementById(
+            "baby"
+        );
+
+    baby.classList.remove(
+        "baby-happy"
+    );
+
+    void baby.offsetWidth;
+
+    baby.classList.add(
+        "baby-happy"
+    );
+
+
+    setTimeout(function() {
+
+        baby.classList.remove(
+            "baby-happy"
+        );
+
+    }, 1000);
+}
+
+
+/* =====================================================
+   TOUCH ANIMATION
+===================================================== */
+
+function smoothTouch(
+    element,
+    type
+) {
+
+    element.classList.remove(
+        "touching",
+        "animal-touch",
+        "letter-touch",
+        "number-touch"
+    );
+
+    void element.offsetWidth;
+
+    element.classList.add(
+        "touching"
+    );
+
+
+    if (type === "animal") {
+
+        element.classList.add(
+            "animal-touch"
+        );
+
+    }
+
+
+    if (type === "letter") {
+
+        element.classList.add(
+            "letter-touch"
+        );
+
+    }
+
+
+    if (type === "number") {
+
+        element.classList.add(
+            "number-touch"
+        );
+
+    }
+
+
+    createTouchSparkles(
+        element
+    );
+
+    babyHappy();
+
+
+    setTimeout(function() {
+
+        element.classList.remove(
+            "touching",
+            "animal-touch",
+            "letter-touch",
+            "number-touch"
+        );
+
+    }, 900);
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+function createTouchSparkles(
+    element
+) {
+
+    const rect =
+        element.getBoundingClientRect();
+
+
+    const icons = [
+        "✨",
+        "⭐",
+        "🌟",
+        "💖"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 7;
+        i++
+    ) {
+
+        const sparkle =
+            document.createElement(
+                "div"
+            );
+
+
+        sparkle.className =
+            "touch-sparkle";
+
+
+        sparkle.innerHTML =
+            icons[
+                Math.floor(
+                    Math.random()
+                    * icons.length
+                )
+            ];
+
+
+        sparkle.style.left =
+            (
+                rect.left +
+                rect.width / 2
+            ) + "px";
+
+
+        sparkle.style.top =
+            (
+                rect.top +
+                rect.height / 2
+            ) + "px";
+
+
+        sparkle.style.setProperty(
+            "--x",
+            (
+                (Math.random() - .5)
+                * 100
+            ) + "px"
+        );
+
+
+        document.body.appendChild(
+            sparkle
+        );
+
+
+        setTimeout(function() {
+
+            sparkle.remove();
+
+        }, 900);
+    }
+}
+
+
+/* =====================================================
+   HOME BUTTONS
+===================================================== */
+
+function homeTouch(
+    card,
+    section
+) {
+
+    smoothTouch(
+        card,
+        "home"
+    );
+
+
+    const messages = {
+
+        abc:
+            "Let's learn the ABC!",
+
+        numbers:
+            "Let's learn numbers!",
+
+        colors:
+            "Let's learn colours!",
+
+        shapes:
+            "Let's learn shapes!",
+
+        animals:
+            "Let's meet the animals!",
+
+        quiz:
+            "Let's play today's quiz!"
+
+    };
+
+
+    const message =
+        messages[section];
+
+
+    document.getElementById(
+        "speech"
+    ).innerHTML =
+        "👩‍🏫 " + message;
+
+
+    speak(message);
+
+
+    setTimeout(function() {
+
+        goTo(section);
+
+    }, 700);
+}
+
+
+/* =====================================================
+   START LEARNING
+===================================================== */
+
+function startLearning() {
+
+    const button =
+        document.querySelector(
+            ".start-button"
+        );
+
+
+    smoothTouch(
+        button,
+        "home"
+    );
+
+
+    document.getElementById(
+        "speech"
+    ).innerHTML =
+        "👩‍🏫 Hello! Come, let's learn together! 🌟";
+
+
+    speak(
+        "Hello! Come, let's learn together!"
+    );
+
+
+    setTimeout(function() {
+
+        goTo("abc");
+
+    }, 1200);
+}
+
+
+/* =====================================================
+   ABC DATA
+===================================================== */
+
+const letters = [
+
+    ["A","Apple","🍎"],
+    ["B","Ball","⚽"],
+    ["C","Cat","🐱"],
+    ["D","Dog","🐶"],
+    ["E","Elephant","🐘"],
+    ["F","Fish","🐟"],
+    ["G","Grapes","🍇"],
+    ["H","House","🏠"],
+    ["I","Ice Cream","🍦"],
+    ["J","Juice","🧃"],
+    ["K","Kite","🪁"],
+    ["L","Lion","🦁"],
+    ["M","Monkey","🐒"],
+    ["N","Nest","🪺"],
+    ["O","Orange","🍊"],
+    ["P","Parrot","🦜"],
+    ["Q","Queen","👑"],
+    ["R","Rabbit","🐰"],
+    ["S","Sun","☀️"],
+    ["T","Tiger","🐯"],
+    ["U","Umbrella","☂️"],
+    ["V","Van","🚐"],
+    ["W","Watermelon","🍉"],
+    ["X","Xylophone","🎵"],
+    ["Y","Yo-Yo","🪀"],
+    ["Z","Zebra","🦓"]
+
+];
+
+
+const abcGrid =
+    document.getElementById(
+        "abcGrid"
+    );
+
+
+letters.forEach(
+    function(item) {
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            "card";
+
+
+        card.innerHTML = `
+
+            <div class="letter">
+                ${item[0]}
+            </div>
+
+            <div class="word">
+                ${item[2]} ${item[1]}
+            </div>
+
+        `;
+
+
+        card.addEventListener(
+            "click",
+            function() {
+
+                smoothTouch(
+                    card,
+                    "letter"
+                );
+
+
+                const text =
+                    item[0] +
+                    " is for " +
+                    item[1];
+
+
+                document.getElementById(
+                    "speech"
+                ).innerHTML =
+                    "👩‍🏫 " +
+                    text +
+                    "! 🌟";
+
+
+                speak(text);
+
+            }
+        );
+
+
+        abcGrid.appendChild(
+            card
+        );
+
+    }
+);
+
+
+/* =====================================================
+   NUMBER DATA
+===================================================== */
+
+const numbers = [
+
+    ["1","One","🍎"],
+    ["2","Two","🍎 🍎"],
+    ["3","Three","🍎 🍎 🍎"],
+    ["4","Four","🍎 🍎 🍎 🍎"],
+    ["5","Five","⭐ ⭐ ⭐ ⭐ ⭐"],
+    ["6","Six","🎈 🎈 🎈 🎈 🎈 🎈"],
+    ["7","Seven","🌸 🌸 🌸 🌸 🌸 🌸 🌸"],
+    ["8","Eight","🦋 🦋 🦋 🦋 🦋 🦋 🦋 🦋"],
+    ["9","Nine","🍓 🍓 🍓 🍓 🍓 🍓 🍓 🍓 🍓"],
+    ["10","Ten","🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟"]
+
+];
+
+
+const numberGrid =
+    document.getElementById(
+        "numberGrid"
+    );
+
+
+numbers.forEach(
+    function(item) {
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            "card";
+
+
+        card.innerHTML = `
+
+            <div class="number">
+                ${item[0]}
+            </div>
+
+            <div class="count">
+                ${item[2]}
+            </div>
+
+        `;
+
+
+        card.addEventListener(
+            "click",
+            function() {
+
+                smoothTouch(
+                    card,
+                    "number"
+                );
+
+
+                const text =
+                    "This is number " +
+                    item[0];
+
+
+                document.getElementById(
+                    "speech"
+                ).innerHTML =
+                    "👩‍🏫 " +
+                    text +
+                    "!";
+
+
+                speak(text);
+
+            }
+        );
+
+
+        numberGrid.appendChild(
+            card
+        );
+
+    }
+);
+
+
+/* =====================================================
+   COLOURS
+===================================================== */
+
+function colorSpeak(
+    card,
+    color
+) {
+
+    smoothTouch(
+        card,
+        "color"
+    );
+
+
+    const text =
+        "This is " +
+        color +
+        " colour";
+
+
+    document.getElementById(
+        "speech"
+    ).innerHTML =
+        "👩‍🏫 " +
+        text +
+        "! 🎨";
+
+
+    speak(text);
+}
+
+
+/* =====================================================
+   SHAPES
+===================================================== */
+
+function shapeSpeak(
+    card,
+    shape
+) {
+
+    smoothTouch(
+        card,
+        "shape"
+    );
+
+
+    const text =
+        "This is a " +
+        shape;
+
+
+    document.getElementById(
+        "speech"
+    ).innerHTML =
+        "👩‍🏫 " +
+        text +
+        "! 🔷";
+
+
+    speak(text);
+}
+
+
+/* =====================================================
+   REAL ANIMAL AUDIO
+===================================================== */
+
+let currentAnimalAudio = null;
+
+
+function animalTouch(
+    card,
+    animal,
+    soundText,
+    soundFile
+) {
+
+    smoothTouch(
+        card,
+        "animal"
+    );
+
+
+    document.getElementById(
+        "speech"
+    ).innerHTML =
+        "👩‍🏫 This is a " +
+        animal +
+        "! 🐾";
+
+
+    speak(
+        "This is a " +
+        animal
+    );
+
+
+    showSoundBubble(
+        card,
+        "🔊 " +
+        soundText
+    );
+
+
+    setTimeout(
+        function() {
+
+            playAnimalSound(
+                soundFile
+            );
+
+        },
+        1000
+    );
+}
+
+
+function playAnimalSound(
+    file
+) {
+
+    if (currentAnimalAudio) {
+
+        currentAnimalAudio.pause();
+
+        currentAnimalAudio.currentTime =
+            0;
+    }
+
+
+    currentAnimalAudio =
+        new Audio(file);
+
+
+    currentAnimalAudio.preload =
+        "auto";
+
+
+    currentAnimalAudio.volume =
+        1.0;
+
+
+    currentAnimalAudio
+        .play()
+        .catch(
+            function(error) {
+
+                console.log(
+                    "Animal sound error:",
+                    error
+                );
+
+
+                document.getElementById(
+                    "speech"
+                ).innerHTML =
+                    "🔊 Please add the animal MP3 file.";
+            }
+        );
+}
+
+
+/* =====================================================
+   SOUND BUBBLE
+===================================================== */
+
+function showSoundBubble(
+    card,
+    text
+) {
+
+    const old =
+        card.querySelector(
+            ".sound-bubble"
+        );
+
+
+    if (old) {
+
+        old.remove();
+    }
+
+
+    const bubble =
+        document.createElement(
+            "div"
+        );
+
+
+    bubble.className =
+        "sound-bubble";
+
+
+    bubble.innerText =
+        text;
+
+
+    card.appendChild(
+        bubble
+    );
+
+
+    setTimeout(
+        function() {
+
+            if (bubble.parentNode) {
+
+                bubble.remove();
+            }
+
+        },
+        1300
+    );
+}
+
+
+/* =====================================================
+   DAILY QUIZ DATA
+===================================================== */
+
+/*
+   Each array = one day's quiz.
+
+   7 example days are included.
+
+   You can add more days below.
+*/
+
+const dailyQuestions = [
+
+    /* DAY 1 */
+
+    [
+
+        {
+            question:
+                "Which one is an Apple? 🍎",
+
+            options:
+                [
+                    "🍎 Apple",
+                    "🐶 Dog",
+                    "🐱 Cat"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "What comes after A? 🔤",
+
+            options:
+                [
+                    "B",
+                    "D",
+                    "Z"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "How many fingers are on one hand? ✋",
+
+            options:
+                [
+                    "3",
+                    "5",
+                    "10"
+                ],
+
+            answer: 1
+        }
+
+    ],
+
+
+    /* DAY 2 */
+
+    [
+
+        {
+            question:
+                "Which animal says Moo? 🐮",
+
+            options:
+                [
+                    "🐮 Cow",
+                    "🐱 Cat",
+                    "🦁 Lion"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "What colour is the sky? ☁️",
+
+            options:
+                [
+                    "Green",
+                    "Blue",
+                    "Pink"
+                ],
+
+            answer: 1
+        },
+
+
+        {
+            question:
+                "What number comes after 4? 🔢",
+
+            options:
+                [
+                    "3",
+                    "5",
+                    "8"
+                ],
+
+            answer: 1
+        }
+
+    ],
+
+
+    /* DAY 3 */
+
+    [
+
+        {
+            question:
+                "Which animal can fly? 🐦",
+
+            options:
+                [
+                    "🐘 Elephant",
+                    "🐦 Bird",
+                    "🐄 Cow"
+                ],
+
+            answer: 1
+        },
+
+
+        {
+            question:
+                "Which letter starts the word Ball? ⚽",
+
+            options:
+                [
+                    "A",
+                    "B",
+                    "C"
+                ],
+
+            answer: 1
+        },
+
+
+        {
+            question:
+                "How many wheels does a bicycle have? 🚲",
+
+            options:
+                [
+                    "1",
+                    "2",
+                    "4"
+                ],
+
+            answer: 1
+        }
+
+    ],
+
+
+    /* DAY 4 */
+
+    [
+
+        {
+            question:
+                "Which animal says Meow? 🐱",
+
+            options:
+                [
+                    "🐱 Cat",
+                    "🐶 Dog",
+                    "🐮 Cow"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "What colour is a banana? 🍌",
+
+            options:
+                [
+                    "Yellow",
+                    "Blue",
+                    "Purple"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "What comes after 9? 🔢",
+
+            options:
+                [
+                    "8",
+                    "10",
+                    "11"
+                ],
+
+            answer: 1
+        }
+
+    ],
+
+
+    /* DAY 5 */
+
+    [
+
+        {
+            question:
+                "Which is a fruit? 🍊",
+
+            options:
+                [
+                    "🍊 Orange",
+                    "🐶 Dog",
+                    "🚗 Car"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "Which shape has 3 sides? 🔺",
+
+            options:
+                [
+                    "Circle",
+                    "Square",
+                    "Triangle"
+                ],
+
+            answer: 2
+        },
+
+
+        {
+            question:
+                "What letter comes after C? 🔤",
+
+            options:
+                [
+                    "D",
+                    "A",
+                    "F"
+                ],
+
+            answer: 0
+        }
+
+    ],
+
+
+    /* DAY 6 */
+
+    [
+
+        {
+            question:
+                "Which animal is the biggest? 🐘",
+
+            options:
+                [
+                    "🐘 Elephant",
+                    "🐱 Cat",
+                    "🐰 Rabbit"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "Which colour is a tomato usually? 🍅",
+
+            options:
+                [
+                    "Red",
+                    "Blue",
+                    "Black"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "How many legs does a dog have? 🐶",
+
+            options:
+                [
+                    "2",
+                    "4",
+                    "6"
+                ],
+
+            answer: 1
+        }
+
+    ],
+
+
+    /* DAY 7 */
+
+    [
+
+        {
+            question:
+                "Which animal can swim? 🐟",
+
+            options:
+                [
+                    "🐟 Fish",
+                    "🐦 Bird",
+                    "🐘 Elephant"
+                ],
+
+            answer: 0
+        },
+
+
+        {
+            question:
+                "Which shape is round? ⭕",
+
+            options:
+                [
+                    "Triangle",
+                    "Circle",
+                    "Square"
+                ],
+
+            answer: 1
+        },
+
+
+        {
+            question:
+                "What comes before 5? 🔢",
+
+            options:
+                [
+                    "3",
+                    "4",
+                    "6"
+                ],
+
+            answer: 1
+        }
+
+    ]
+
+];
+
+
+/* =====================================================
+   QUIZ VARIABLES
+===================================================== */
+
+let todayQuiz = [];
+
+let currentQuestion = 0;
+
+let quizScore = 0;
+
+
+/* =====================================================
+   GET TODAY'S QUIZ
+===================================================== */
+
+function getTodayQuiz() {
+
+    const today =
+        new Date();
+
+
+    const start =
+        new Date(
+            today.getFullYear(),
+            0,
+            0
+        );
+
+
+    const difference =
+        today - start;
+
+
+    const oneDay =
+        1000 *
+        60 *
+        60 *
+        24;
+
+
+    const dayOfYear =
+        Math.floor(
+            difference /
+            oneDay
+        );
+
+
+    /*
+       7 sample quiz sets.
+
+       Each new day gets
+       the next set.
+
+       You can add 30 sets
+       for 30 different days.
+    */
+
+    const quizNumber =
+        dayOfYear %
+        dailyQuestions.length;
+
+
+    return dailyQuestions[
+        quizNumber
+    ];
+}
+
+
+/* =====================================================
+   LOAD QUIZ
+===================================================== */
+
+function loadDailyQuiz() {
+
+    todayQuiz =
+        getTodayQuiz();
+
+
+    currentQuestion = 0;
+
+    quizScore = 0;
+
+
+    document.getElementById(
+        "quizScore"
+    ).innerHTML = "";
+
+
+    document.getElementById(
+        "dayTitle"
+    ).innerHTML =
+        "📅 Today's Fun Quiz! 🌈";
+
+
+    showQuizQuestion();
+}
+
+
+/* =====================================================
+   SHOW QUESTION
+===================================================== */
+
+function showQuizQuestion() {
+
+    const question =
+        todayQuiz[
+            currentQuestion
+        ];
+
+
+    document.getElementById(
+        "quizProgress"
+    ).innerHTML =
+        "Question " +
+        (currentQuestion + 1) +
+        " of 3";
+
+
+    document.getElementById(
+        "quizQuestion"
+    ).innerHTML =
+        question.question;
+
+
+    document.getElementById(
+        "quizResult"
+    ).innerHTML =
+        "";
+
+
+    document.getElementById(
+        "nextQuestion"
+    ).style.display =
+        "none";
+
+
+    const options =
+        document.getElementById(
+            "quizOptions"
+        );
+
+
+    options.innerHTML = "";
+
+
+    question.options.forEach(
+        function(
+            option,
+            index
+        ) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "quiz-button";
+
+
+            button.innerHTML =
+                option;
+
+
+            button.onclick =
+                function() {
+
+                    checkDailyAnswer(
+                        index,
+                        button
+                    );
+
+                };
+
+
+            options.appendChild(
+                button
+            );
+
+        }
+    );
+}
+
+
+/* =====================================================
+   CHECK QUIZ ANSWER
+===================================================== */
+
+function checkDailyAnswer(
+    selected,
+    button
+) {
+
+    const question =
+        todayQuiz[
+            currentQuestion
+        ];
+
+
+    const allButtons =
+        document.querySelectorAll(
+            "#quizOptions .quiz-button"
+        );
+
+
+    allButtons.forEach(
+        function(btn) {
+
+            btn.disabled = true;
+
+        }
+    );
+
+
+    if (
+        selected ===
+        question.answer
+    ) {
+
+        quizScore++;
+
+
+        button.style.background =
+            "#69db7c";
+
+
+        document.getElementById(
+            "quizResult"
+        ).innerHTML =
+            "🎉 Correct! Very Good! ⭐";
+
+
+        speak(
+            "Very good! That is correct!"
+        );
+
+
+        createTouchSparkles(
+            button
+        );
+
+    }
+
+    else {
+
+        button.style.background =
+            "#ff8787";
+
+
+        document.getElementById(
+            "quizResult"
+        ).innerHTML =
+            "😊 Nice try! Try again tomorrow!";
+
+
+        speak(
+            "Nice try! Keep learning!"
+        );
+
+    }
+
+
+    document.getElementById(
+        "nextQuestion"
+    ).style.display =
+        "inline-block";
+}
+
+
+/* =====================================================
+   NEXT QUESTION
+===================================================== */
+
+function nextQuizQuestion() {
+
+    currentQuestion++;
+
+
+    if (
+        currentQuestion >=
+        todayQuiz.length
+    ) {
+
+        finishDailyQuiz();
+
+        return;
+    }
+
+
+    showQuizQuestion();
+}
+
+
+/* =====================================================
+   FINISH QUIZ
+===================================================== */
+
+function finishDailyQuiz() {
+
+    document.getElementById(
+        "quizProgress"
+    ).innerHTML =
+        "🎉 Quiz Complete!";
+
+
+    document.getElementById(
+        "quizQuestion"
+    ).innerHTML =
+        "🌟 Amazing Job! 🌟";
+
+
+    document.getElementById(
+        "quizOptions"
+    ).innerHTML =
+        "";
+
+
+    document.getElementById(
+        "nextQuestion"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "quizResult"
+    ).innerHTML =
+        "You got " +
+        quizScore +
+        " out of 3! 🏆";
+
+
+    if (quizScore === 3) {
+
+        document.getElementById(
+            "quizScore"
+        ).innerHTML =
+            "🏆 Perfect! You are a Super Learner!";
+
+        speak(
+            "Perfect! You are a super learner!"
+        );
+
+    }
+
+    else if (quizScore === 2) {
+
+        document.getElementById(
+            "quizScore"
+        ).innerHTML =
+            "🌟 Great job! Keep learning!";
+
+        speak(
+            "Great job! Keep learning!"
+        );
+
+    }
+
+    else {
+
+        document.getElementById(
+            "quizScore"
+        ).innerHTML =
+            "💖 Good try! Come back tomorrow!";
+
+        speak(
+            "Good try! Come back tomorrow for a new quiz!"
+        );
+
+    }
+
+
+    createTouchSparkles(
+        document.querySelector(
+            ".quiz-box"
+        )
+    );
+}
+
+
+/* =====================================================
+   LOAD VOICES
+===================================================== */
+
+if (
+    "speechSynthesis"
+    in window
+) {
+
+    speechSynthesis
+        .getVoices();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
